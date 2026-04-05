@@ -1,0 +1,16 @@
+# Ignorar carpeta de construcción (compilados y el .jar)
+/target/
+
+# Ignorar archivos de configuración de VS Code (opcional)
+.vscode/
+
+# Ignorar archivos temporales de Java y Maven
+*.class
+*.log
+*.jar
+
+# Archivos específicos de otros editores (por si acaso)
+.settings/
+.classpath
+.project
+.factorypath

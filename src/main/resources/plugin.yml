@@ -1,0 +1,9 @@
+name: MiPrimerPlugin
+version: 1.0
+main: me.adelch.App
+api-version: "1.21"
+author: adelch
+commands:
+  tocar:
+    description: Un comando de prueba para mi primer plugin.
+    usage: /tocar
