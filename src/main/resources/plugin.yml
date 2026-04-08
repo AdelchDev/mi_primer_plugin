@@ -7,3 +7,6 @@ commands:
   tocar:
     description: Un comando de prueba para mi primer plugin.
     usage: /tocar
+  zeus:
+    description: Invoca un rayo.
+    usage: /zeus

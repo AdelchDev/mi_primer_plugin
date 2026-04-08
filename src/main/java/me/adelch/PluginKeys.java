@@ -1,0 +1,14 @@
+package me.adelch;
+
+import org.bukkit.NamespacedKey;
+import org.bukkit.plugin.java.JavaPlugin;
+
+public class PluginKeys {
+    public static NamespacedKey ZEUS_ITEM;
+    public static NamespacedKey ZEUS_RECIPE;
+
+    public static void init(JavaPlugin plugin) {
+        ZEUS_ITEM = new NamespacedKey(plugin, "es_zeus");
+        ZEUS_RECIPE = new NamespacedKey(plugin, "palitroque_zeus");
+    }
+}
