@@ -1,5 +1,8 @@
-package me.adelch;
+package me.adelch.Items;
 import org.bukkit.persistence.PersistentDataType;
+
+import me.adelch.PluginKeys;
+
 import org.bukkit.entity.Player;
 import org.bukkit.event.EventHandler;
 import org.bukkit.event.Listener;

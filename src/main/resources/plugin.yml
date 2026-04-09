@@ -10,3 +10,6 @@ commands:
   zeus:
     description: Invoca un rayo.
     usage: /zeus
+  minigun:
+    description: Da una minigun al jugador. 
+    usage: /minigun
