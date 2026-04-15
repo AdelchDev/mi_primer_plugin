@@ -1,4 +1,4 @@
-package me.adelch.Items;
+package me.adelch.Items.Weapons;
 import org.bukkit.persistence.PersistentDataType;
 
 import me.adelch.PluginKeys;

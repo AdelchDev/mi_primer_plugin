@@ -13,3 +13,9 @@ commands:
   minigun:
     description: Da una minigun al jugador. 
     usage: /minigun
+  soltartodos:
+    description: Suelta los objetos de la mano de todos los jugadores.
+    usage: /soltartodos
+  attackboost:
+    description: Da un objeto con velocidad de ataque personalizada.
+    usage: /attackboost

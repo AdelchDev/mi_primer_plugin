@@ -1,11 +1,4 @@
 package me.adelch.Items;
-
-import me.adelch.PluginKeys;
-
-import org.bukkit.inventory.ItemStack;
-import org.bukkit.inventory.meta.ItemMeta;
-import org.bukkit.persistence.PersistentDataType;
-
 import java.util.ArrayList;
 import java.util.List;
 
@@ -14,6 +7,8 @@ import org.bukkit.attribute.Attribute;
 import org.bukkit.attribute.AttributeModifier;
 import org.bukkit.enchantments.Enchantment;
 import org.bukkit.inventory.EquipmentSlotGroup;
+import org.bukkit.inventory.ItemStack;
+import org.bukkit.inventory.meta.ItemMeta;
 
 import net.kyori.adventure.text.Component;
 import net.kyori.adventure.text.format.TextColor;
@@ -22,35 +17,20 @@ import net.kyori.adventure.text.minimessage.MiniMessage;
 
 public class ItemUtils {
 
-    public static void SetDamage(ItemStack item, double damage) {
+
+   
+    public static void SetAttribute(ItemStack item, NamespacedKey key, double speed, Attribute genericAttribute, EquipmentSlotGroup slotGroup) {
 
         ItemMeta meta = item.getItemMeta();
         if (meta != null) {
 
             AttributeModifier modifier = new AttributeModifier(
-                    PluginKeys.ZEUS_ITEM,
-                    damage,
-                    AttributeModifier.Operation.ADD_NUMBER,
-                    EquipmentSlotGroup.MAINHAND);
-
-            meta.addAttributeModifier(Attribute.GENERIC_ATTACK_DAMAGE, modifier);
-            item.setItemMeta(meta);
-        }
-
-    }
-
-    public static void SetAttackSpeed(ItemStack item, double speed) {
-
-        ItemMeta meta = item.getItemMeta();
-        if (meta != null) {
-
-            AttributeModifier modifier = new AttributeModifier(
-                    PluginKeys.ZEUS_ITEM,
+                    key,
                     speed,
                     AttributeModifier.Operation.ADD_NUMBER,
-                    EquipmentSlotGroup.MAINHAND);
+                    slotGroup);
 
-            meta.addAttributeModifier(Attribute.GENERIC_ATTACK_SPEED, modifier);
+            meta.addAttributeModifier(genericAttribute, modifier);
             item.setItemMeta(meta);
         }
 
@@ -63,7 +43,6 @@ public class ItemUtils {
         ItemMeta meta = item.getItemMeta();
 
         if (meta != null) {
-            // Debes encadenar los métodos porque cada uno devuelve un NUEVO objeto
             Component nameComponent = Component.text(text)
                     .color(color)
                     .decoration(TextDecoration.BOLD, isBold)
@@ -106,21 +85,11 @@ public class ItemUtils {
         }
     }
 
-    public static void addTag(ItemStack item, NamespacedKey key) {
-        ItemMeta meta = item.getItemMeta();
-        if (meta != null) {
-            meta.getPersistentDataContainer().set(key, PersistentDataType.BYTE, (byte) 1);
-            item.setItemMeta(meta);
-        }
-    }
-
     public static void addEnchant(ItemStack item, Enchantment ench, int level) {
         ItemMeta meta = item.getItemMeta();
         if (meta != null) {
-
             meta.addEnchant(ench, level, true);
             item.setItemMeta(meta);
         }
     }
-
 }

@@ -1,4 +1,4 @@
-package me.adelch.Items;
+package me.adelch.Items.Weapons;
 
 import org.bukkit.Material;
 import org.bukkit.inventory.ItemFlag;
@@ -7,12 +7,13 @@ import org.bukkit.inventory.meta.ItemMeta;
 import org.bukkit.persistence.PersistentDataType;
 
 import me.adelch.PluginKeys;
+import me.adelch.Items.ItemUtils;
 import net.kyori.adventure.text.format.NamedTextColor;
 
 public class MinigunPesada {
 
 
-    public static ItemStack getMinigun() {
+    public static ItemStack getArma() {
         ItemStack minigun = new ItemStack(Material.CROSSBOW);
 
         ItemUtils.setName(minigun, "MINIGUN PESADA.", NamedTextColor.GOLD, true, false, false, false);
