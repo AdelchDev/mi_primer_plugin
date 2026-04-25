@@ -3,19 +3,23 @@ version: 1.0
 main: me.adelch.App
 api-version: "1.21"
 author: adelch
+
 commands:
+  getitem:
+    description: Comando universal para obtener objetos personalizados.
+    usage: /getitem <id>
+    # Los aliases permiten que tus comandos viejos sigan "vivos" 
+    # pero todos redirigen a la clase GiveItemCommand.
+    aliases: [zeus, minigun, attackboost]
+    
   tocar:
     description: Un comando de prueba para mi primer plugin.
     usage: /tocar
-  zeus:
-    description: Invoca un rayo.
-    usage: /zeus
-  minigun:
-    description: Da una minigun al jugador. 
-    usage: /minigun
+    
   soltartodos:
     description: Suelta los objetos de la mano de todos los jugadores.
     usage: /soltartodos
-  attackboost:
-    description: Da un objeto con velocidad de ataque personalizada.
-    usage: /attackboost
+
+  getItems:
+    description: Otorga todos los items custom del plugin
+    usage: /getItems

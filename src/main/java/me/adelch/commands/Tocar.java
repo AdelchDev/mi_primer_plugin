@@ -8,7 +8,7 @@ public class Tocar implements CommandExecutor {
         boolean resultado = false;
         
         if (CommandUtils.isCommand(command, "tocar")) {
-            commandSender.sendMessage("§a¡Has tocado el plugin TODAY!");
+            commandSender.sendMessage("§a¡Has tocado el plugin SARASA!");
             resultado = true;
         }
         return resultado;
